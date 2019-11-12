@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="border-bottom d-flex align-items-center pb-4 mb-4">
+    <h1><%= @article.title %></h1>
+    <%= link_to edit_article_path do %>
+      <h5><span class="glyphicon glyphicon-pencil mx-2"></span></h5>
+    <% end %>
+    <%= link_to article_path, method: :delete do %>
+      <h5><span class="glyphicon glyphicon-trash mx-2"></span></h5>
+    <% end %>
+  </div>
+  <div>
+    <%= @article.content %>
+  </div>
+</div>
